@@ -20,14 +20,14 @@ http://localhost/hello
 # For Mac with Apple Chips (use different application)
 Step-1: Install Docker with Apple Chips binary (https://docs.docker.com/desktop/mac/install/) on your mac machine
 
-Step-2: Run the simple Nginx Application container. 
+Step-2: Run the simple Nginx Application container.
 docker run --name kube1 -p 80:80 --platform linux/amd64 -d  stacksimplify/kubenginx:1.0.0
 http://localhost
 
 ## Sample Output
-kalyanreddy@Kalyans-Mac-mini-2 ~ % docker run --name kube1 -p 80:80 --platform linux/amd64 -d  stacksimplify/kubenginx:1.0.0
+$ ~ % docker run --name kube1 -p 80:80 --platform linux/amd64 -d  stacksimplify/kubenginx:1.0.0
 370f238d97556813a4978572d24983d6aaf80d4300828a57f27cda3d3d8f0fec
-kalyanreddy@Kalyans-Mac-mini-2 ~ % curl http://localhost
+$ ~ % curl http://localhost
 <!DOCTYPE html>
 <html>
    <body style="background-color:lightgoldenrodyellow;">
@@ -36,7 +36,7 @@ kalyanreddy@Kalyans-Mac-mini-2 ~ % curl http://localhost
       <p>Application Version: V1</p>
    </body>
 </html>%
-kalyanreddy@Kalyans-Mac-mini-2 ~ % 
+$ ~ %
 
 ```
 
@@ -52,15 +52,15 @@ docker ps -a -q
 docker exec -it <container-name> /bin/sh
 ```
 
-## Step-6: Container Stop, Start 
+## Step-6: Container Stop, Start
 ```
 docker stop <container-name>
 docker start  <container-name>
 ```
 
-## Step-7: Remove Container 
+## Step-7: Remove Container
 ```
-docker stop <container-name> 
+docker stop <container-name>
 docker rm <container-name>
 ```
 
@@ -69,4 +69,3 @@ docker rm <container-name>
 docker images
 docker rmi  <image-id>
 ```
-
