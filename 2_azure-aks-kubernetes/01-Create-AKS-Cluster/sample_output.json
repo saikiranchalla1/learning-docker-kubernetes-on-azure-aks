@@ -1,0 +1,158 @@
+{
+  "aadProfile": null,
+  "addonProfiles": null,
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 1,
+      "creationData": null,
+      "enableAutoScaling": false,
+      "enableEncryptionAtHost": false,
+      "enableFips": false,
+      "enableNodePublicIp": false,
+      "enableUltraSsd": false,
+      "gpuInstanceProfile": null,
+      "kubeletConfig": null,
+      "kubeletDiskType": "OS",
+      "linuxOsConfig": null,
+      "maxCount": null,
+      "maxPods": 30,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeImageVersion": "AKSUbuntu-1804gen2containerd-2022.03.29",
+      "nodeLabels": null,
+      "nodePublicIpPrefixId": null,
+      "nodeTaints": null,
+      "orchestratorVersion": "1.21.9",
+      "osDiskSizeGb": 128,
+      "osDiskType": "Managed",
+      "osSku": "Ubuntu",
+      "osType": "Linux",
+      "podSubnetId": null,
+      "powerState": {
+        "code": "Running"
+      },
+      "provisioningState": "Succeeded",
+      "proximityPlacementGroupId": null,
+      "scaleDownMode": null,
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "upgradeSettings": null,
+      "vmSize": "standard_e2bds_v5",
+      "vnetSubnetId": null,
+      "workloadRuntime": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "autoUpgradeProfile": null,
+  "azurePortalFqdn": "aksdemo1-aks-rg1-5be08d-bc2fefbd.portal.hcp.centralus.azmk8s.io",
+  "disableLocalAccounts": false,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "aksdemo1-aks-rg1-5be08d",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "extendedLocation": null,
+  "fqdn": "aksdemo1-aks-rg1-5be08d-bc2fefbd.hcp.centralus.azmk8s.io",
+  "fqdnSubdomain": null,
+  "httpProxyConfig": null,
+  "id": "/subscriptions/5be08db5-67bf-4522-8b2b-5c0523e3dd93/resourcegroups/aks-rg1/providers/Microsoft.ContainerService/managedClusters/aksdemo1",
+  "identity": {
+    "principalId": "3710db72-9d1d-4e74-b7cc-e8c927a03ab3",
+    "tenantId": "05874e5b-414c-440d-95d0-7158cd484fe9",
+    "type": "SystemAssigned",
+    "userAssignedIdentities": null
+  },
+  "identityProfile": {
+    "kubeletidentity": {
+      "clientId": "7ecc1884-15da-4219-b41e-d97fe6cf347e",
+      "objectId": "27f30e11-5594-426b-83ab-ca88976b2b30",
+      "resourceId": "/subscriptions/5be08db5-67bf-4522-8b2b-5c0523e3dd93/resourcegroups/MC_aks-rg1_aksdemo1_centralus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aksdemo1-agentpool"
+    }
+  },
+  "kubernetesVersion": "1.21.9",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMqThUTAdG+XKKgn/fO9P8wUyt3IRIW/bZxSmIAu0604bXtaWyVj0plH2OzOARKwKApEZ7UMVmknLuMPpucn5cUsRfMlDsgGqcnUasn4533aBGP9ttXgX/TzSPXtttmMM96tmVMrVyczajCV9iDGdl0cyoi952sYKhRa4/GaBbMsqvktFzM24EGTh7xFugJaaFwcqkONMU56h/2tibutbFjYqIgYnY9xuHa+TXHNveuRUvDWcBd/VuPuD5RbZ5ipqfT7dSovgIJ12Ps7Cip/2+JhwtITfTAZURhF2+ZEAgdN4U9LoRdFFvj3uaqT02jl2eW7IY1cSeJWq/9slIddYR schalla@Sais-MBP.hsd1.ut.comcast.net\n"
+        }
+      ]
+    }
+  },
+  "location": "centralus",
+  "maxAgentPools": 100,
+  "name": "aksdemo1",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "ipFamilies": [
+      "IPv4"
+    ],
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIPs": [
+        {
+          "id": "/subscriptions/5be08db5-67bf-4522-8b2b-5c0523e3dd93/resourceGroups/MC_aks-rg1_aksdemo1_centralus/providers/Microsoft.Network/publicIPAddresses/dd833736-27f4-4ac7-9273-b34b7fbecdc5",
+          "resourceGroup": "MC_aks-rg1_aksdemo1_centralus"
+        }
+      ],
+      "enableMultipleStandardLoadBalancers": null,
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIPs": {
+        "count": 1,
+        "countIpv6": null
+      },
+      "outboundIPs": null,
+      "outboundIpPrefixes": null
+    },
+    "loadBalancerSku": "Standard",
+    "natGatewayProfile": null,
+    "networkMode": null,
+    "networkPlugin": "azure",
+    "networkPolicy": "Azure",
+    "outboundType": "loadBalancer",
+    "podCidr": null,
+    "podCidrs": null,
+    "serviceCidr": "10.0.0.0/16",
+    "serviceCidrs": [
+      "10.0.0.0/16"
+    ]
+  },
+  "nodeResourceGroup": "MC_aks-rg1_aksdemo1_centralus",
+  "podIdentityProfile": null,
+  "powerState": {
+    "code": "Running"
+  },
+  "privateFqdn": null,
+  "privateLinkResources": null,
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "aks-rg1",
+  "securityProfile": {
+    "azureDefender": null
+  },
+  "servicePrincipalProfile": {
+    "clientId": "msi",
+    "secret": null
+  },
+  "sku": {
+    "name": "Basic",
+    "tier": "Free"
+  },
+  "systemData": null,
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": {
+    "adminPassword": null,
+    "adminUsername": "azureuser",
+    "enableCsiProxy": true,
+    "gmsaProfile": null,
+    "licenseType": null
+  }
+}
