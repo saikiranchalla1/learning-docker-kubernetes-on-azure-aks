@@ -5,7 +5,18 @@
 - Discuss about Kubernetes Architecture from AKS Cluster perspective
 
 ## Step-02: Create AKS Cluster
-- Create Kubernetes Cluster
+We can create the AKS cluster using two methods:
+1. Manually by logging into the Azure portal or
+2. Using azure-CLI from your local machine (preferred).
+
+### Create AKS CLuster using Azure CLI
+- From your local machine, open command prompt or terminal and execute the following Az commands:
+
+```
+az group create --name aks-rg1 --location centralus
+az aks create -g aks-rg1 --node-count 1 --enable-managed-identity --node-vm-size standard_e2bds_v5 --vm-set-type VirtualMachineScaleSets --network-policy Azure --network-plugin azure --generate-ssh-keys --name aksdemo1
+```
+### Create AKS Cluster Manually (not preferred)
 - **Basics**
   - **Subscription:** Free Trial
   - **Resource Group:** Creat New: aks-rg1
