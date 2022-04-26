@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
         - name: acrdemo2ss 
-          image: acrdemo2ss.azurecr.io/app2/acr-app2:v1   # Update Image Name 
+          image: acrdemoforcognixia.azurecr.io/saikiranchalla/kube-nginx-acr:v1 
           imagePullPolicy: Always
           ports:
             - containerPort: 80
       imagePullSecrets:   # Update Image Pull Secret Name we creted
-        - name: acrdemo2ss-secret  
+        - name: acrdemo-secret 
         
 
 
