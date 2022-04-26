@@ -72,5 +72,14 @@ Add the following files to the repo: (check [this](https://medium.com/code-facto
 Github repository for the project. Don't forget to add **saikiranchalla1** as the collaborator in the project.
 
 
+# Grading policy
+The assignment is going to be graded on a scale of 0-100.
+If your application simply "works", you are guaranteed to score 80 points.
+
+# Duration
+Total time: **3 days**
+
+Presentations on the last day. Limit your presentations to not more than 15 minutes. Use of slides is encouraged, but not required.
+
 
 
