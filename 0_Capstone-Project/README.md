@@ -11,6 +11,7 @@ Choose a technology for the HTTP web API that you are comfortable with. It could
 Understand that this is an API, and hence a User Interface is optional. The API should be able to do the following: (if you don't know the logic for the following, please Google):
 - GET /{any_number} should return the roman numeral equivalent of that number
 - GET /ping should return the static text "pong". This will be used for health check later.
+- GET /version should return the version of the application like v1, v2 etc. This can be hardcoded.
 
 If you choose to use Java Spring Boot then:
 - Navigate to [Spring Initializr](https://start.spring.io/)
@@ -45,7 +46,14 @@ Compare your configuration with the following screenshot
 8. Make sure that the service's Kubernetes manifests have liveness and readiness probes defined in them.
 9. Update your README with the links to access the service in all the 4 environments
 
-Follow all the standard development practices like reviewing pull requests, using development branches etc.
+Follow all the standard development practices like reviewing pull requests, using development branches, use of ignore files to skip adding or copying unnecessary files etc.
+
+Add the following files to the repo: (check [this](https://medium.com/code-factory-berlin/github-repository-structure-best-practices-248e6effc405) link)
+1. License file
+2. Contributors file
+3. Support file
+4. Pull request template file (nice to have)
+
 
 # Extra credits
 - A dashboard to monitor:
@@ -57,6 +65,8 @@ Follow all the standard development practices like reviewing pull requests, usin
 - Not using LOADBALANCER service type to expose the service outside the cluster.
 - Using ticket numbers to track work. For this you can use the **Issues** in Github to create issues. Each issue is assigned a unique ID. Create a branch with that ID and work on it.
 - Additional settings in the Github repo to ensure no one can merge to main branch directly.
+- Detailed log messages in the code to be able to debug the application upon failures.
+- Network diagram of the infrastructure
 
 # Deliverables
 Github repository for the project. Don't forget to add **saikiranchalla1** as the collaborator in the project.
