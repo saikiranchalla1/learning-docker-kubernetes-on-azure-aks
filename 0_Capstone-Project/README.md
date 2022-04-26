@@ -3,6 +3,7 @@ In this 3-day Capstone project, you'll deploy an HTTP web API to a managed Kuber
 
 # Pre-reqs
 This is a group project. Choose your team and create a shared Github repository (private).
+Required team size: 3-4
 
 # Description
 Choose a technology for the HTTP web API that you are comfortable with. It could be NodeJS, Java or any other technology that supports building web API. My preference is that you use Java Spring Boot since it is very easy to work with.
