@@ -15,6 +15,8 @@ description: Restrict Access to k8s resources using Kubernetes RBAC Cluster Role
 
 
 ## Step-02: Create AD Group, Role Assignment and User
+For Windows, please prefix the role assignment command with `MSYS_NO_PATHCONV=1`.
+
 ```
 # Get Azure AKS Cluster Id
 AKS_CLUSTER_ID=$(az aks show --resource-group aks-rg3 --name aksdemo3 --query id -o tsv)
