@@ -67,7 +67,7 @@ Add the following files to the repo: (check [this](https://medium.com/code-facto
 - Additional settings in the Github repo to ensure no one can merge to main branch directly.
 - Detailed log messages in the code to be able to debug the application upon failures.
 - Network diagram of the infrastructure
-
+- Unit and integration tests
 # Deliverables
 Github repository for the project. Don't forget to add **saikiranchalla1** as the collaborator in the project.
 
