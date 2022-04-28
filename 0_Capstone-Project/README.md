@@ -13,6 +13,7 @@ Understand that this is an API, and hence a User Interface is optional. The API 
 - GET /ping should return the static text "pong". This will be used for health check later.
 - GET /version should return the version of the application like v1, v2 etc. This can be hardcoded.
 
+**Use the code in service_code folder.**
 If you choose to use Java Spring Boot then:
 - Navigate to [Spring Initializr](https://start.spring.io/)
 - Provide the following details:
@@ -80,6 +81,3 @@ If your application simply "works", you are guaranteed to score 80 points.
 Total time: **3 days**
 
 Presentations on the last day. Limit your presentations to not more than 15 minutes. Use of slides is encouraged, but not required.
-
-
-
