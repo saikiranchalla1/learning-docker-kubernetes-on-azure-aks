@@ -43,6 +43,7 @@ Watch [this](https://www.youtube.com/watch?v=502ILHjX9EE&t=19s) YT video.
 2. Github repository with all the code and manifest files.
 3. A screenshot of JIRA roadmap.
 4. Recording of the Sprint demo where each developer will demo what he/she worked on during the Sprint.
+5. Recording of the retrospective meeting at the end of the sprint.
 
 
 **REMEMBER! THE FOCUS OF THIS PROJECT IS TO LEARN MORE ABOUT HOW AN AGILE TEAM SELF-ORGANIZES ITSELF TO ACHIEVE THE PRODUCT GOALS.**.
