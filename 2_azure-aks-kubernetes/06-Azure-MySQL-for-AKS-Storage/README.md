@@ -32,10 +32,10 @@
 
 ## Step-03: Update Security Settings for Database
 - Go to **Azure Database for MySQL Servers** -> **akswebappdb**
-- **Settings -> Connection Security**
-  - **Very Important**: Enable **Allow Access to Azure Services**
+- **Settings -> Networking**
+  - **Very Important**: Enable **Allow public access from any Azure service within Azure to this server**
   - Update Firewall rules to allow from local desktop (Add current client IP Address)
-  - **SSL Settings**: Disabled  
+- Next click on **Server Parameters** under settings and search for **require_secure_transport**, change it's value from ON to OFF.
   - Click on **Save**
 - It will take close to 15 minutes for changes to take place. 
 
