@@ -4,6 +4,13 @@
 - What are the problems with MySQL Pod & Azure Disks? 
 - How we are going to solve them using Azure MySQL Database?
 
+## Step-02 Pre-req:
+- Before you, move to the next step, get the VNET for the AKS cluster and create a new Subnet called `dbsubnet`.
+- To find the VNET for AKS cluster
+  - Navigate to Azure Portal and search for `Virtual Networks`
+  - Click on the VNET with name that looks like `aks-vnet-XXXXXXX`. This is the VNET that was created as a result of AKS Cluster creation.
+  - Click on the `Subnets` section under settings in the VNET and create a new subnet with the name `dbsubnet` (leave others as default) and click on `Save.
+  - Wait for the subnet to be created. Once the Subnet is created, move to the next step.
 ## Step-02: Create Azure Database for MySQL servers
 - Go to Service **Azure Database for MySQL servers**
 - Click on **Add**
@@ -27,14 +34,16 @@
   - Admin username: dbadmin
   - Password: Redhat1449
   - Confirm password: Redhat1449
+- Move to the next step by clicking on `Next: Networking >`.
+- **Connectivity method**: Private access (VNet integration)
+- Virtual Network:
+  - Virtual Network: Select the VNET for the AKS CLuster
+  - Subnet: **dbsubnet**.
 - **Review + Create**  
 - It will take close to 15 minutes to create the database. 
 
 ## Step-03: Update Security Settings for Database
 - Go to **Azure Database for MySQL Servers** -> **akswebappdb**
-- **Settings -> Networking**
-  - **Very Important**: Enable **Allow public access from any Azure service within Azure to this server**
-  - Update Firewall rules to allow from local desktop (Add current client IP Address)
 - Next click on **Server Parameters** under settings and search for **require_secure_transport**, change it's value from ON to OFF.
   - Click on **Save**
 - It will take close to 15 minutes for changes to take place. 
@@ -46,7 +55,7 @@ mysql --host=mydemoserver.mysql.database.azure.com --user=myadmin@mydemoserver -
 # 
 mysql --host=akswebappdb.mysql.database.azure.com --user=dbadmin@akswebappdb -p
 ```
-
+- If the connection is successful, it pro
 ## Step-04: Create Kubernetes externalName service Manifest and Deploy
 - Create mysql externalName Service
 - **01-MySQL-externalName-Service.yml**
