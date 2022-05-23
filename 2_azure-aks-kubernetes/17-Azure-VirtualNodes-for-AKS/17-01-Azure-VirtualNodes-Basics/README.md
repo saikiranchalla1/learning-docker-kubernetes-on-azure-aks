@@ -13,7 +13,15 @@ description: Create Azure Kubernetes Services (AKS) cluster to use virtual nodes
 
 [![Image](https://stacksimplify.com/course-images/azure-kubernetes-service-virtual-nodes.png "Azure AKS Kubernetes - Masterclass")](https://stacksimplify.com/course-images/azure-kubernetes-service-virtual-nodes.png)
 
- ## Step-02: Create a new cluster using Azure Management Console
+## Step-02: Enable Virtual nodes on an existing cluster
+Follow the instructions in the following blog to enable the virtual node addon on an existing cluster:
+https://chunliu.me/2021/01/25/enable-virtual-node-on-an-existing-aks-cluster/
+
+```
+az aks enable-addons --addons virtual-node --name aksdemo1 --resource-group aks-rg1 --subnet-name virtual-kubelet-aci-subnet
+```
+
+ ## Step-02: Create a new cluster using Azure Management Console (optional)
 - **Basics**
   - **Subscription:** Free Trial or Pay-as-you-go
   - **Resource Group:** Creat New: aks-rg2
