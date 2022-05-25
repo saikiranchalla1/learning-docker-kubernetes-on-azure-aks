@@ -110,17 +110,6 @@ kubectl get ns
 - Stage Name: Dev
 - Create Task 
 - Agent Job: Change to Ubunut Linux (latest)
-### Add Task: Create Secret
-- Display Name: Create Secret to allow image pull from ACR
-- Action: create secret
-- Kubernetes service connection: dev-ns-k8s-aks-svc-conn
-- Namespace: dev
-- Type of secret: dockerRegistry
-- Secret name: dev-aksdevopsacr-secret
-- Docker registry service connection: manual-aksdevopsacr-svc
-- Rest all leave to defaults
-- Click on **SAVE** to save release
-- Comment: Dev k8s Create Secret task added
 
 ### Add Task: Deploy to Kubernetes
 - Display Name: Deploy to AKS
