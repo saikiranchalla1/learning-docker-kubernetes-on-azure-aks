@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-demo
@@ -7,10 +7,13 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-  - host: app1.d5571f700c974e02812e.centralus.aksapp.io
+  - host: app1.94fdad50fe534193a5ff.centralus.aksapp.io
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: app1-nginx-clusterip-service
-          servicePort: 80
+          service:
+            name: app1-nginx-clusterip-service
+            port:
+              number: 80
