@@ -1,0 +1,41 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+variables:
+  tag: '$(Build.BuildId)'
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'azure-devops-acr-svc-conn'
+    repository: 'custom3appnginx'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(tag)
+      $(Build.SourceVersion)
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)/kube-manifests'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'kube-manifests'
+    publishLocation: 'Container'
